@@ -1,0 +1,13 @@
+<h1>Add a sport to your list of favorites</h1>
+<%= @sport.id ? "Edit" : "New" %>
+<%= form_with(model: @sport, local: true) do |f| %>
+<div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+</div>
+<div class="field">
+    <%= f.label :favorite_team %>
+    <%= f.text_field :favorite_team %>
+</div>
+<%= f.submit %>
+<%end%>
