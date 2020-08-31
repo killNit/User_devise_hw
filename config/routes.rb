@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root "users#index"
+# root "sports#index"
   devise_for :users
 
   resources :sports
