@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_08_31_205039) do
+=======
+ActiveRecord::Schema.define(version: 2020_08_31_202359) do
+>>>>>>> 061eb389fcea90330e25fb78c23376f78c036f11
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "foods", force: :cascade do |t|
     t.string "name"
     t.string "kind"
@@ -22,6 +27,15 @@ ActiveRecord::Schema.define(version: 2020_08_31_205039) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_foods_on_user_id"
+=======
+  create_table "sports", force: :cascade do |t|
+    t.string "name"
+    t.string "favorite_team"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_sports_on_user_id"
+>>>>>>> 061eb389fcea90330e25fb78c23376f78c036f11
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,5 +53,9 @@ ActiveRecord::Schema.define(version: 2020_08_31_205039) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
   add_foreign_key "foods", "users"
+=======
+  add_foreign_key "sports", "users"
+>>>>>>> 061eb389fcea90330e25fb78c23376f78c036f11
 end
