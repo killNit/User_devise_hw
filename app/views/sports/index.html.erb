@@ -1,6 +1,7 @@
 <h1>Welcome <%= current_user.first_name %> </h1>
 <%= link_to "Add a favorite sport to your list", new_sport_path %>
 <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+
 <ul>
     <% @sports.each do |sport| %>
         <li>

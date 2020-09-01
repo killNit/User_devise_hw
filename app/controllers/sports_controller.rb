@@ -1,6 +1,7 @@
 class SportsController < ApplicationController
   def index
     @sports = current_user.sports
+    
   end
 
   def new
@@ -11,8 +12,8 @@ class SportsController < ApplicationController
   def create
   @sport = current_user.sports.new(sport_params)
     if @sport.save
-    redirect_to sports_path
-    else render :new
+    redirect_to sports_path, notice: "Sport was added to your favorites!"
+    else render :new, notice: "Try again moron..."
     end
   end
 
