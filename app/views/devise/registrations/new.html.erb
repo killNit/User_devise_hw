@@ -5,23 +5,6 @@
 
   <div class="field">
     <%= f.label :email %><br />
-<<<<<<< HEAD
-    <%= f.email_field :email, require: true%>
-  </div>
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, require: true%>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, require: true%>
-  </div>
-  <div class="field">
-    <%= f.label :hometown %><br />
-    <%= f.text_field :hometown, require: true%>
-  </div>
-  
-=======
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
@@ -40,7 +23,6 @@
  <%= f.text_field :hometown, required: true %>
 </div>
 
->>>>>>> 061eb389fcea90330e25fb78c23376f78c036f11
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
