@@ -1,0 +1,19 @@
+<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+<h2>Welcome <%= current_user.first_name %></h2>
+<hr />
+
+<h3>Your Favorite Foods</h3>
+<ul>
+  <% @foods.each do |food| %>
+    <li>
+      <%= food.name %> - <%= food.kind %>
+    </li>
+    <%= link_to "More info", food_path(food) %>
+    <br />
+    <%= link_to "Edit food", edit_food_path(food) %>
+    <br />
+    <%= link_to "Delete food", food_path(food), method: :delete %>
+  <%end%>
+</ul>
+<br />
+<%= link_to "Add Food", new_food_path %>

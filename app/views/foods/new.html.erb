@@ -1,0 +1,12 @@
+<h1>Add Your Favorite Foods</h1>
+<%= form_with(model: @food, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Food" %>
+  </div>
+  <div class="field">
+      <%= f.label :kind %>
+      <%= f.text_field :kind, required: true, placeholder: "Kind" %>
+  </div>
+  <%= f.submit %>
+<% end %>
